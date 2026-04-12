@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+
+    /* 🌈 ҚОЗҒАЛАТЫН ФОН */
+    background: linear-gradient(-45deg,
+            #ffecd2,
+            #fcb69f,
+            #a1c4fd,
+            #c2e9fb,
+            #f6d365);
+
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* 🌊 фон анимациясы */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+/* TEXT */
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
